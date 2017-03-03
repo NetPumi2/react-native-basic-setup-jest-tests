@@ -7,16 +7,38 @@
 		"test": "jest"
 	},
 	"dependencies": {
+		"jest-react-native": "^18.0.0",
 		"react": "~15.4.1",
-		"react-native": "0.42.0"
+		"react-native": "0.42.0",
+		"unexpected": "^10.26.3",
+		"unexpected-react": "^3.5.0",
+		"unexpected-set": "^1.1.0"
 	},
 	"devDependencies": {
 		"babel-jest": "19.0.0",
 		"babel-preset-react-native": "1.9.1",
-		"jest": "19.0.2",
+		"jest": "^19.0.2",
 		"react-test-renderer": "~15.4.1"
 	},
 	"jest": {
-		"preset": "react-native"
+		"preset": "jest-react-native",
+		"automock": false,
+
+		"coverageReporters": [
+			"json",
+			"lcov",
+			"text",
+			"html"
+		],
+		"collectCoverageFrom": [
+			"src/components/**/*.js",
+			"src/lib/**/*.js",
+			"src/**/*.js"
+		],
+		"coveragePathIgnorePatterns": [
+			"/node_modules/",
+			"<rootDir>/index.*.js",
+			"<rootDir>/tests/setup.js"
+		]
 	}
 }

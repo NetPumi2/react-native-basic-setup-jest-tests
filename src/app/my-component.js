@@ -19,7 +19,10 @@ export default class Header extends React.Component {
         }}
       >
         <Text style={{ color: 'white', fontSize: 25, fontWeight: 'bold' }}>
-          Test me please... I want to be test... please please ...
+          Test me please... {"\n"}I want to be test... {"\n"}please please ...{"\n"}
+          Im gonna do everything for tests...{"\n"}Dont let me cry!!!!!!
+          {"\n\n\n\n"}
+          NOTE: folder coverage will be generated automatically
         </Text>
       </View>
     );
